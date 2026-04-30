@@ -1,0 +1,75 @@
+/*reset default browser spacing
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: Arial,Arial, Helvetica, sans-serif;
+}
+section{
+    padding: 40px;
+    border-bottom: 1px solid gray;
+}
+h1,h2 {
+    color: yellow;
+
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+#student {
+    background-color: white;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-student {
+    background-color: grey;
+    padding:50px;
+    border: 3px solid #ccc;
+    margin: 20px;
+}
+.section-about {
+    background-color: grey;
+    padding: 50px;
+    border: 3px solid #ccc;
+    margin: 20px;
+}
+.section-skills {
+    background-color: bisque;
+    padding: 50px;
+    border: #9bc43b solid 3px;
+    margin: 20px;
+}
+.section-projects {
+    background-color: thistle;
+    padding: 50px;
+    border: 3px solid #ccc;
+    margin: 20px; 
+          
+}
+.section-contact {
+    background-color: oldlace;
+    padding: 50px;
+    border: 3px solid #ccc;
+    margin: 20px;
+}
+
+span{
+    display: block;
+    
+}
+#projects {
+    display: flex;
+    gap : 20px;
+}
