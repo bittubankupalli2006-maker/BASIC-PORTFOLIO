@@ -1,75 +1,282 @@
-/*reset default browser spacing
-*/
-* {
+/* ===== BODY ===== */
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-color: black;
+    font-family: Arial, sans-serif;
     color: white;
-    font-family: Arial,Arial, Helvetica, sans-serif;
-}
-section{
-    padding: 40px;
-    border-bottom: 1px solid gray;
-}
-h1,h2 {
-    color: yellow;
-
-}
-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-#student {
-    background-color: white;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+    background: #0f2027;
+    overflow-x: hidden;
 }
 
-.section-student {
-    background-color: grey;
-    padding:50px;
-    border: 3px solid #ccc;
-    margin: 20px;
-}
-.section-about {
-    background-color: grey;
-    padding: 50px;
-    border: 3px solid #ccc;
-    margin: 20px;
-}
-.section-skills {
-    background-color: bisque;
-    padding: 50px;
-    border: #9bc43b solid 3px;
-    margin: 20px;
-}
-.section-projects {
-    background-color: thistle;
-    padding: 50px;
-    border: 3px solid #ccc;
-    margin: 20px; 
-          
-}
-.section-contact {
-    background-color: oldlace;
-    padding: 50px;
-    border: 3px solid #ccc;
-    margin: 20px;
+/* ===== SMOKE BACKGROUND ===== */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
 }
 
-span{
+.background span {
+    position: absolute;
     display: block;
-    
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 173, 181, 0.15);
+    border-radius: 50%;
+    animation: move 20s linear infinite;
+    filter: blur(60px);
 }
-#projects {
-    display: flex;
-    gap : 20px;
+
+.background span:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-duration: 25s;
+}
+
+.background span:nth-child(2) {
+    top: 50%;
+    left: 70%;
+    animation-duration: 18s;
+}
+
+.background span:nth-child(3) {
+    top: 80%;
+    left: 40%;
+    animation-duration: 22s;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-200px) scale(1.2);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #00adb5, #007b80);
+    box-shadow: 0 0 20px rgba(0, 173, 181, 0.6);
+}
+
+header span {
+    color: yellow;
+}
+
+/* ===== SECTION ===== */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+/* ===== PROJECT CARD (GLASS EFFECT) ===== */
+.project-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    width: 280px;
+    padding: 15px;
+    margin: 15px;
+    display: inline-block;
+    box-shadow: 0 0 20px rgba(0, 173, 181, 0.3);
+    transition: 0.4s;
+}
+
+/* Hover Glow */
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 173, 181, 0.8);
+}
+
+/* Image */
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Buttons */
+.buttons a {
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 5px;
+    display: inline-block;
+    background: linear-gradient(45deg, #00adb5, #00f2ff);
+    color: black;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+.buttons a:hover {
+    background: linear-gradient(45deg, #00f2ff, #00adb5);
+    box-shadow: 0 0 10px #00f2ff;
+}
+
+/* SOCIAL LINKS */
+.social-links a {
+    margin: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    box-shadow: 0 0 15px #ff6a00;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.6);
+}/* ===== BODY ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: #0f2027;
+    overflow-x: hidden;
+}
+
+/* ===== SMOKE BACKGROUND ===== */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background span {
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 173, 181, 0.15);
+    border-radius: 50%;
+    animation: move 20s linear infinite;
+    filter: blur(60px);
+}
+
+.background span:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-duration: 25s;
+}
+
+.background span:nth-child(2) {
+    top: 50%;
+    left: 70%;
+    animation-duration: 18s;
+}
+
+.background span:nth-child(3) {
+    top: 80%;
+    left: 40%;
+    animation-duration: 22s;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-200px) scale(1.2);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #00adb5, #007b80);
+    box-shadow: 0 0 20px rgba(0, 173, 181, 0.6);
+}
+
+header span {
+    color: yellow;
+}
+
+/* ===== SECTION ===== */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+/* ===== PROJECT CARD (GLASS EFFECT) ===== */
+.project-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    width: 280px;
+    padding: 15px;
+    margin: 15px;
+    display: inline-block;
+    box-shadow: 0 0 20px rgba(0, 173, 181, 0.3);
+    transition: 0.4s;
+}
+
+/* Hover Glow */
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 173, 181, 0.8);
+}
+
+/* Image */
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* Buttons */
+.buttons a {
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 5px;
+    display: inline-block;
+    background: linear-gradient(45deg, #00adb5, #00f2ff);
+    color: black;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+.buttons a:hover {
+    background: linear-gradient(45deg, #00f2ff, #00adb5);
+    box-shadow: 0 0 10px #00f2ff;
+}
+
+/* SOCIAL LINKS */
+.social-links a {
+    margin: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    box-shadow: 0 0 15px #ff6a00;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.6);
 }
